@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services Form</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Aristocrat services form</h1>
+        <form action="/submit_form" method="post" enctype="multipart/form-data">
+        <!-- Name -->
+        <label for="Name">Name:</label><br>
+        <input type="text" id="Name" name="Name" required>
+        <br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required>
+        <br>
+		
+		<!-- Writing Services -->
+		Writing Services:<br>
+		<input list="Writing Services" type="text" id="writing_services" name="writing_services" placeholder="Type to search">
+		<datalist id="Writing Services">
+			<option value="Essay">
+			<option value="Research Paper">
+			<option value="Critical Writing">
+			<option value="Report">
+			<option value="Annotated Bibliography">
+			<option value="Article">
+			<option value="Assessment">
+			<option value="Book Review">
+			<option value="Business Letter">
+			<option value="Case Study">
+			<option value="Course Work">
+			<option value="Discussion Board Post">
+			<option value="Dissertation">
+			<option value="Editing">
+			<option value="Extended Outline">
+			<option value="Movie Review">
+			<option value="Nursing Paper">
+			<option value="Online Test">
+			<option value="Paraphrasing">
+			<option value="Personal Statement">
+			<option value="Poster">
+			<option value="Power point presentation">
+			<option value="Proposal">
+			<option value="Q & A">
+			<option value="Quiz">
+			<option value="Reading Diary">
+			<option value="Speech">
+			<option value="Summarizing">
+			<option value="Term Paper">
+			<option value="Thesis">
+			<option value="Literature Review">
+			<option value="Original Research Paper">
+			<option value="Term paper writing">
+			<option value="Blog post writing">
+			<option value="Resume/CV writing">
+			<option value="Cover letter writing">
+			<option value="Proofreading and editing">
+			<option value="Ghostwriting">
+			<option value="Grant proposal writing">
+			<option value="White paper writing">
+			<option value="Press release writing">
+			<option value="Product description writing">
+			<option value="Social media content writing">
+			<option value="Landing page writing">
+			<option value="Website content writing">
+			<option value="SEO content writing">
+			<option value="Brochure and pamphlet writing">
+			<option value="Software documentation writing">
+			<option value="Historical writing">
+			<option value="Political writing">
+			<option value="Real estate writing">
+		</datalist>
+		<br>
+		
+		<!-- Publishing Services -->
+		Publishing Services:<br>
+		<input list="Publishing Services" type="text" id="publishing_services" name="publishing_services" placeholder="Type to search">
+		<datalist id="Publishing Services">
+			<option value="Book publishing">
+			<option value="Magazine publishing">
+			<option value="Newspaper publishing">
+			<option value="Academic journal publishing">
+			<option value="Research paper publishing">
+			<option value="Brochure publishing">
+			<option value="Catalog publishing">
+			<option value="Annual report publishing">
+			<option value="Comic book publishing">
+			<option value="Graphic novel publishing">
+			<option value="Zine publishing">
+			<option value="Audiobook publishing">
+			<option value="White paper publishing">
+			<option value="Technical manual publishing">
+			<option value="Trade publication publishing">
+			<option value="Literary journal publishing">
+			<option value="Poetry chapbook publishing">
+			<option value="Self-publishing services">
+			<option value="Poetry journal publishing">
+			<option value="Financial magazine publishing">
+			<option value="Science fiction magazine publishing">
+			<option value="Fashion catalog publishing">
+			<option value="Travelogue publishing">
+			<option value="Sports blog publishing">
+			<option value="Gaming magazine publishing">
+			<option value="Gardening magazine publishing">
+			<option value="Pet care magazine publishing">
+			<option value="DIY and craft magazine publishing">
+			<option value="Art critique publication publishing">
+			<option value="Political opinion publication publishing">
+			<option value="Scientific research article publishing">
+			<option value="Food blog publishing">
+			<option value="Technology blog publishing">
+			<option value="Lifestyle blog publishing">
+			<option value="Horror book publishing">
+			<option value="Thesis and dissertation publishing">
+		</datalist>
+		<br>
+		
+		<!-- Marketing research consulting Services -->
+		Marketing research consulting Services:<br>
+		<input list="Marketing research consulting Services" type="text" id="marketing_services" name="marketing_services" placeholder="Type to search">
+		<datalist id="Marketing research consulting Services">
+			<option value="Primary Data Collection">
+			<option value="Market Analysis">
+			<option value="Consumer Insights">
+			<option value="Competitive Analysis">
+			<option value="Brand Research">
+			<option value="Market Segmentation">
+			<option value="Product Testing and Development">
+			<option value="Trend Analysis">
+			<option value="Data Analytics and Visualization">
+			<option value="Market Research Design and Planning">
+			<option value="Customer Segmentation and Profiling">
+			<option value="Brand Research and Positioning">
+			<option value="Market Opportunity Assessment">
+			<option value="Custom Market Research and Consulting">
+			<option value="Market Entry Strategy">
+			<option value="Innovation and idea testing">
+			<option value="Brand loyalty and advocacy measurement">
+			<option value="Industry and market analysis reports">
+			<option value="Market research training and workshops">
+			<option value="Product performance tracking">
+			<option value="Market entry barriers analysis">
+			<option value="Brand awareness and perception studies">
+			<option value="Consumer sentiment analysis">
+			<option value="Competitive landscape analysis">
+			<option value="Market share analysis">
+			<option value="Cross-cultural research and international studies">
+			<option value="Geographical and demographic studies">
+			<option value="Concept and idea generation">
+			<option value="Data mining and analytics">
+			<option value="Usability testing and user experience research">
+			<option value="Focus groups and in-depth interviews">
+		</datalist>
+		<br>
+		
+		<!-- Business consulting Services -->
+		Business consulting Services:<br>
+		<input list="Business consulting Services" type="text" id="business_services" name="business_services" placeholder="Type to search">
+		<datalist id="Business consulting Services">
+			<option value="Performance Marketing">
+			<option value="Influencer Marketing">
+			<option value="Marketing Automation">
+			<option value="Marketplaces Promotions">
+			<option value="Account-Based Marketing">
+			<option value="Brand Architecture">
+			<option value="Brand Guidelines Development">
+			<option value="Brand Positioning and Differentiation">
+			<option value="Brand Experience Design">
+			<option value="Brand Training and Internal Branding">
+			<option value="Financial Management">
+			<option value="Operations Optimization">
+			<option value="Organizational Development">
+			<option value="Change Management">
+			<option value="Technology Consulting">
+			<option value="Risk ManagementMarketing and Branding">
+			<option value="Marketing and Branding">
+			<option value="Sustainability and CSR Consulting">
+			<option value="Manufacturing and Operations Consulting">
+			<option value="Hospitality and Tourism Consulting">
+			<option value="Healthcare Consulting">
+			<option value="Nonprofit Consulting">
+			<option value="Family Business Consulting">
+			<option value="Small Business Consulting">
+			<option value="Start-up Consulting and Support">
+			<option value="Regulatory Compliance">
+			<option value="Intellectual Property Strategy and Protection">
+			<option value="Diversity and Inclusion Consulting">
+			<option value="Succession Planning">
+			<option value="Training and Development Programs">
+			<option value="Leadership Development and Coaching">
+			<option value="Cybersecurity Consulting">
+			<option value="Sales and Channel Strategy">
+			<option value="E-commerce Strategy and Implementation">
+			<option value="Project Management">
+			<option value="Business Performance Metrics and KPIs">
+			<option value="Financial Analysis and Modeling">
+			<option value="Business Planning and Forecasting">
+		</datalist>
+		<br>
+		
+		<!-- Investment consulting Services -->
+		Investment consulting Services:<br>
+		<input list="Investment consulting Services" type="text" id="investment_services" name="investment_services" placeholder="Type to search">
+		<datalist id="Investment consulting Services">
+			<option value="Investment Consulting for Businesses">
+			<option value="Investment Consulting for Wealth Creation">
+			<option value="Mutual Funds Investment Consulting">
+			<option value="Portfolio Analysis and Optimization">
+			<option value="Investment Strategy Development">
+			<option value="Investment Performance Evaluation">
+			<option value="Retirement Planning and Pension Advisory">
+			<option value="Risk Management and Compliance">
+			<option value="Sovereign Wealth Fund Consulting">
+			<option value="Institutional Investor Consulting">
+			<option value="Investment Outsourcing Solutions">
+			<option value="Investment Reporting and Dashboards">
+			<option value="Investment Governance Framework Design">
+			<option value="Capital Market Assumptions and Forecasting">
+			<option value="Investment Due Diligence and Oversight">
+			<option value="Investment Fee Analysis and Negotiation">
+			<option value="Philanthropic Giving Strategies">
+			<option value="Financial Planning and Goal Setting">
+			<option value="Impact Investing Consulting">
+			<option value="Hedge Fund Consulting">
+			<option value="Risk Management and Mitigation">
+			<option value="Pension Fund Consulting">
+			<option value="Family Office Consulting">
+			<option value="Wealth Management Consulting">
+		</datalist>
+		<br>
+		
+		<!-- Technology consulting Services -->
+		Technology consulting Services:<br>
+		<input list="Technology consulting Services" type="text" id="technology_services" name="technology_services" placeholder="Type to search">
+		<datalist id="Technology consulting Services">
+			<option value="IT Strategy and Roadmap Development">
+			<option value="Digital Transformation">
+			<option value="Technology Assessments and Audits">
+			<option value="Software Development">
+			<option value="Android App Development">
+			<option value="Web App Development">
+			<option value="Data Strategy and Analytics">
+			<option value="Innovation and Emerging Technology Advisory">
+			<option value="CMS development (Content Management System)">
+			<option value="API development">
+			<option value="UI/UX design and development">
+			<option value="Cloud computing and deployment">
+			<option value="Database development and management">
+			<option value="Data analysis and visualization">
+			<option value="Machine learning and AI development">
+			<option value="Natural language processing (NLP)">
+			<option value="Chatbot development">
+			<option value="Blockchain development">
+			<option value="Cryptocurrency development">
+			<option value="IT Sourcing and Procurement Strategy">
+			<option value="IT Resource Planning and Allocation">
+			<option value="Software Selection and Implementation">
+			<option value="Software Development Life Cycle (SDLC) Consulting">
+			<option value="Custom Made Product">
+			<option value="Network Design and Optimization">
+			<option value="Data Center Optimization and Consolidation">
+			<option value="Robotic Process Automation (RPA) Consulting">
+			<option value="IT Risk Assessment and Mitigation">
+			<option value="Artificial Intelligence (AI) and Machine Learning Consulting">
+			<option value="Business Process Automation Consulting">
+			<option value="IT Service Management and ITIL Consulting">
+		</datalist>
+		<br>
+		
+		<!-- Political consulting Services -->
+		Political consulting Services:<br>
+		<input list="Political consulting Services" type="text" id="political_services" name="political_services" placeholder="Type to search">
+		<datalist id="Political consulting Services">
+			<option value="Political campaign management">
+			<option value="Election strategy consulting">
+			<option value="Political branding and messaging">
+			<option value="Political research and analysis">
+			<option value="Grassroots organizing">
+			<option value="Voter outreach and mobilization">
+			<option value="Constituency profiling">
+			<option value="Opinion polling">
+			<option value="Political event planning and management">
+			<option value="Political fundraising strategies">
+			<option value="Digital marketing for political campaigns">
+			<option value="Public relations for politicians">
+			<option value="Political Endorsement Strategy">
+			<option value="Political Speech Coaching">
+			<option value="Ballot Access and Petition Management">
+			<option value="Campaign Compliance and Reporting">
+			<option value="Media Training for Candidates and Campaign Staff">
+			<option value="Campaign Material Production">
+			<option value="Strategic Alliances and Partnerships">
+			<option value="Political Training and Education">
+			<option value="Coalition Building and Management">
+			<option value="Debate Preparation and Coaching">
+			<option value="Opposition Research">
+			<option value="Volunteer Management">
+			<option value="Political Consulting for Corporations and Businesses">
+		</datalist>
+		<br>
+		
+		<!-- Branding consulting Services -->
+		Branding consulting Services:<br>
+		<input list="Branding consulting Services" type="text" id="branding_services" name="branding_services" placeholder="Type to search">
+		<datalist id="Branding consulting Services">
+			<option value="Digital Marketing">
+			<option value="Logo Creation">
+			<option value="Ads Campaign">
+			<option value="Search Engine Optimization (SEO)">
+			<option value="Marketing Automation">
+			<option value="Account-Based Marketing">
+			<option value="Brand Positioning">
+			<option value="Brand Identity DesignBrand Messaging and Communication">
+			<option value="Pay-Per-Click (PPC) Advertising">
+			<option value="Social Media Marketing and Advertising">
+			<option value="Content Marketing Strategy">
+			<option value="Conversion Rate Optimization (CRO)">
+			<option value="Web Analytics and Data Analysis">
+			<option value="Online Reputation Management">
+			<option value="Influencer Marketing Strategy">
+			<option value="Video Marketing and Advertising">
+			<option value="App Store Optimization (ASO)">
+			<option value="Programmatic Advertising">
+			<option value="Affiliate Marketing">
+			<option value="E-commerce Marketing">
+			<option value="Lead Generation Strategy">
+			<option value="Marketing Automation Implementation">
+			<option value="Customer Relationship Management (CRM) Integration">
+			<option value="User Experience (UX) Design">
+			<option value="Website Design and Development">
+			<option value="Content Creation and Marketing">
+			<option value="Blogging and Article Writing">
+			<option value="Social Media Listening and Monitoring">
+			<option value="Online Community Management">
+			<option value="Influencer Outreach and Management">
+			<option value="Online Advertising Campaign Management">
+			<option value="Local Search Marketing">
+			<option value="Online PR and Media Outreach">
+			<option value="Branding and Visual Identity in Digital Channels">
+			<option value="A/B Testing and Multivariate Testing">
+			<option value="Voice Search Optimization">
+			<option value="Chatbot Development and Implementation">
+			<option value="Mobile App Marketing">
+			<option value="Podcast Marketing and Advertising">
+			<option value="Webinar Marketing">
+			<option value="Geo-targeting and Location-based Marketing">
+		</datalist>
+		<br>
+		
+		<!-- Event Management consulting Services -->
+		Event Management consulting Services:<br>
+		<input list="Event Management consulting Services" type="text" id="event_management_services" name="event_management_services" placeholder="Type to search">
+		<datalist id="Event Management consulting Services">
+			<option value="Event concept development and ideation">
+			<option value="Budget planning and financial management">
+			<option value="Venue selection and negotiation">
+			<option value="Event logistics coordination">
+			<option value="Vendor and supplier management">
+			<option value="Event marketing and promotion strategies">
+			<option value="Sponsorship and partnership acquisition">
+			<option value="Program and agenda development">
+			<option value="Speaker and talent management">
+			<option value="Event registration and ticketing management">
+			<option value="On-site event management and coordination">
+			<option value="Event branding and visual identity">
+			<option value="Event audio and visual production">
+			<option value="Event transportation and logistics">
+			<option value="Event database management and CRM integrationon 15">
+			<option value="Event photography and videography">
+			<option value="Event signage and branding materials">
+			<option value="Social media and digital marketing for events">
+			<option value="VIP and guest relations management">
+			<option value="Sponsorship activation and fulfillment">
+			<option value="Exhibitor and booth management">
+			<option value="Accommodation and travel arrangements">
+			<option value="Health and safety planning for events">
+			<option value="Event licensing and permissions">
+			<option value="Event merchandise and promotional items">
+		</datalist>
+		<br>
+		<br>
+
+		<input type="submit" value="Submit">
+		<div id="total_amount_box">
+			{% if total_amount %}
+        		Total Amount: ${{ total_amount }}
+			{% endif %}
+		</div>
+    </form>
+
+</body>
+</html>
+	
